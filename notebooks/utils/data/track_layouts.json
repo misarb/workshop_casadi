@@ -1,0 +1,83 @@
+{
+  "oval_simple": {
+    "name": "Simple Oval Track",
+    "description": "Basic oval shape, good for testing",
+    "length_m": 400,
+    "width_m": 6,
+    "centerline": {
+      "type": "parametric",
+      "major_axis": 100,
+      "minor_axis": 50,
+      "num_points": 100
+    },
+    "speed_zones": [
+      {"start": 0, "end": 0.3, "max_speed_ms": 25},
+      {"start": 0.3, "end": 0.7, "max_speed_ms": 20},
+      {"start": 0.7, "end": 1.0, "max_speed_ms": 25}
+    ]
+  },
+  "figure_eight": {
+    "name": "Figure-8 Track",
+    "description": "Intersecting loops with crossover",
+    "length_m": 600,
+    "width_m": 5,
+    "centerline": {
+      "type": "lemniscate",
+      "scale": 60,
+      "num_points": 150
+    },
+    "speed_zones": [
+      {"start": 0, "end": 0.25, "max_speed_ms": 22},
+      {"start": 0.25, "end": 0.5, "max_speed_ms": 18},
+      {"start": 0.5, "end": 0.75, "max_speed_ms": 22},
+      {"start": 0.75, "end": 1.0, "max_speed_ms": 18}
+    ]
+  },
+  "race_circuit": {
+    "name": "Racing Circuit",
+    "description": "Complex track with straights, hairpins, and chicanes",
+    "length_m": 2400,
+    "width_m": 8,
+    "segments": [
+      {"type": "straight", "length": 400, "start_x": 0, "start_y": 0, "heading": 0},
+      {"type": "turn", "radius": 40, "angle": 90, "direction": "left"},
+      {"type": "straight", "length": 200},
+      {"type": "chicane", "amplitude": 15, "wavelength": 80, "count": 2},
+      {"type": "straight", "length": 300},
+      {"type": "hairpin", "radius": 25, "direction": "right"},
+      {"type": "straight", "length": 250},
+      {"type": "turn", "radius": 60, "angle": 90, "direction": "left"},
+      {"type": "straight", "length": 350},
+      {"type": "turn", "radius": 50, "angle": 90, "direction": "left"}
+    ],
+    "speed_zones": [
+      {"start": 0, "end": 400, "max_speed_ms": 30, "note": "main straight"},
+      {"start": 400, "end": 600, "max_speed_ms": 18, "note": "turn 1"},
+      {"start": 600, "end": 800, "max_speed_ms": 25, "note": "back straight"},
+      {"start": 800, "end": 1000, "max_speed_ms": 20, "note": "chicane"},
+      {"start": 1000, "end": 1300, "max_speed_ms": 28, "note": "straight"},
+      {"start": 1300, "end": 1450, "max_speed_ms": 15, "note": "hairpin"},
+      {"start": 1450, "end": 2400, "max_speed_ms": 25, "note": "final sector"}
+    ]
+  },
+  "parking_lot": {
+    "name": "Parking Lot Maneuver",
+    "description": "Tight maneuvering with obstacles",
+    "length_m": 100,
+    "width_m": 3,
+    "waypoints": [
+      {"x": 0, "y": 0, "heading": 0, "speed_limit": 5},
+      {"x": 20, "y": 0, "heading": 0, "speed_limit": 5},
+      {"x": 20, "y": 10, "heading": 90, "speed_limit": 3},
+      {"x": 30, "y": 10, "heading": 90, "speed_limit": 5},
+      {"x": 30, "y": 20, "heading": 180, "speed_limit": 3},
+      {"x": 10, "y": 20, "heading": 180, "speed_limit": 5},
+      {"x": 10, "y": 30, "heading": 270, "speed_limit": 3},
+      {"x": 0, "y": 30, "heading": 270, "speed_limit": 2}
+    ],
+    "obstacles": [
+      {"x": 15, "y": 5, "radius": 2, "type": "pillar"},
+      {"x": 25, "y": 15, "radius": 2, "type": "pillar"}
+    ]
+  }
+}
