@@ -70,8 +70,8 @@ ax.set_xlim(-140, 140)
 ax.set_ylim(-80, 80)
 
 plt.tight_layout()
-plt.savefig('../public/slides/intro-optimization-mpc-workshop/track-layout.png',
-            dpi=300, bbox_inches='tight', facecolor='white')
+# plt.savefig('../public/slides/intro-optimization-mpc-workshop/track-layout.png',
+#             dpi=300, bbox_inches='tight', facecolor='white')
 plt.close()
 print("  ✓ Saved: track-layout.png")
 
@@ -188,8 +188,8 @@ ax.set_xlim(-140, 140)
 ax.set_ylim(-80, 80)
 
 plt.tight_layout()
-plt.savefig('/home/altenlabs/phd/article_submission/workShop/optimization-mpc/notebooks/figures/trajectory-optimal.png',
-            dpi=300, bbox_inches='tight', facecolor='white')
+# plt.savefig('/home/altenlabs/phd/article_submission/workShop/optimization-mpc/notebooks/figures/trajectory-optimal.png',
+#             dpi=300, bbox_inches='tight', facecolor='white')
 plt.close()
 print("  ✓ Saved: trajectory-optimal.png")
 
@@ -225,8 +225,10 @@ ax.set_xlim(-140, 140)
 ax.set_ylim(-80, 80)
 
 plt.tight_layout()
-plt.savefig('/home/altenlabs/phd/article_submission/workShop/optimization-mpc/notebooks/figures/trajectory-velocity.png',
-            dpi=300, bbox_inches='tight', facecolor='white')
+# plt.savefig('/home/altenlabs/phd/article_submission/workShop/optimization-mpc/notebooks/figures/trajectory-velocity.png',
+#             dpi=300, bbox_inches='tight', facecolor='white')
+
+plt.show()
 plt.close()
 print("  ✓ Saved: trajectory-velocity.png")
 
